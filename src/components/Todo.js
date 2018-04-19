@@ -13,7 +13,6 @@ const Todo = ({ onClick, ColorWhite, ColorPink, ColorGreen, ColorYellow, complet
                       <path d="m0 0h24v24h-24z" fill="none"/>
                   </svg>
               </button>
-              <button type="submit" className="btn-group btn-colors" />
               <div className="change-color">
                   <span className="btn-color btn-white" onClick={ColorWhite}/>
                   <span className="btn-color btn-pink" onClick={ColorPink} />
