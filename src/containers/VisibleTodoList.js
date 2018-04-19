@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
+import { changeColor } from '../actions'
 import TodoList from '../components/TodoList'
 
 const getVisibleTodos = (todos, filter) => {
@@ -20,7 +21,12 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps =  ({
-  onTodoClick: toggleTodo
+  onTodoClick: toggleTodo,
+    ColorWhite: changeColor,
+    ColorPink: changeColor,
+    ColorGreen: changeColor,
+    ColorYellow: changeColor
+
 });
 
 const VisibleTodoList = connect(

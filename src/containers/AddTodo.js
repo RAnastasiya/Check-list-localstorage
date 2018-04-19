@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 
 let AddTodo = ({ dispatch }) => {
-  console.log("dispatch - ", dispatch);
   let input;
 
   return (
@@ -19,7 +18,7 @@ let AddTodo = ({ dispatch }) => {
           <input type="text" id="myInput" placeholder="Заметка…" ref={node => {
           input = node
         }} />
-        <button type="submit" className="addBtn" />
+        <button type="submit" className="addBtn">Add</button>
       </form>
     </div>
   )

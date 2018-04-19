@@ -10,6 +10,7 @@ body,.container {
     position: absolute;
     padding-bottom: 30px;
 }
+
 /* Remove margins and padding from the list */
 ul {
     margin: 0;
@@ -68,38 +69,33 @@ ul {
 }
 
 /* Style the "Add" button */
-.addBtn {
-    background: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQ4cHgiIHdpZHRoPSI0OHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwMDAwMCI+CiA8cGF0aCBkPSJtNDggMHY0OGgtNDh2LTQ4aDQ4eiIgZmlsbD0ibm9uZSIvPgogPHBhdGggZD0ibTYgMzQuNDl2Ny41MWg3LjQ4bDE1LjA4LTE1LjA3LTcuNS03LjUtMTUuMDYgMTUuMDZ6bTMwLjc0LTI3LjlsNC42NyA0LjY3YzAuNzggMC43OCAwLjggMi4wNyAwLjAyIDIuODVsLTEwLjc0IDEwLjcyLTcuNTItNy41MiA1LjA3LTUuMDctMS40Ni0xLjQ2LTExLjMyIDExLjMyLTIuODEtMi44IDEyLjc1LTEyLjczYzAuNzgtMC43OCAyLjA3LTAuNzYgMi44NSAwLjAybDIuODMgMi44MyAyLjgzLTIuODNjMC43Ny0wLjc4IDIuMDUtMC43OCAyLjgzIDB6Ii8+Cjwvc3ZnPgo=) no-repeat;
-   cursor: pointer;
-    transition: 0.3s;
-    background-size: 24px;
+.addBtn{
+    background-color: #4CAF50; /* Green */
     border: none;
-    width: 30px;
-    height: 38px;
-    right: 33%;
-    top: 37px;
+    color: #fff;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     position: absolute;
-}
-.addBtn:hover {
-    background-size: 25px;
 }
 .task-list {
     width: 250px;
     float: left;
     margin: 5px;
-    background-color: white;
     padding: 10px;
     word-wrap: break-word;
     overflow-x: hidden;
     text-decoration: none;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
 .btn-edit {
     background: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjQ4cHgiIHdpZHRoPSI0OHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwMDAwMCI+CiA8cGF0aCBkPSJtNDggMHY0OGgtNDh2LTQ4aDQ4eiIgZmlsbD0ibm9uZSIvPgogPHBhdGggZD0ibTYgMzQuNDl2Ny41MWg3LjQ4bDE1LjA4LTE1LjA3LTcuNS03LjUtMTUuMDYgMTUuMDZ6bTMwLjc0LTI3LjlsNC42NyA0LjY3YzAuNzggMC43OCAwLjggMi4wNyAwLjAyIDIuODVsLTEwLjc0IDEwLjcyLTcuNTItNy41MiA1LjA3LTUuMDctMS40Ni0xLjQ2LTExLjMyIDExLjMyLTIuODEtMi44IDEyLjc1LTEyLjczYzAuNzgtMC43OCAyLjA3LTAuNzYgMi44NSAwLjAybDIuODMgMi44MyAyLjgzLTIuODNjMC43Ny0wLjc4IDIuMDUtMC43OCAyLjgzIDB6Ii8+Cjwvc3ZnPgo=) no-repeat;
     background-position: right;
 }
-.btn-color{
+.btn-colors{
     background: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjE4cHgiIHdpZHRoPSIxOHB4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0iIzAwMDAwMCI+CiA8cGF0aCBkPSJtMjQgNmMtOS45NCAwLTE4IDguMDYtMTggMThzOC4wNiAxOCAxOCAxOGMxLjY2IDAgMy0xLjM0IDMtMyAwLTAuNzgtMC4yOS0xLjQ4LTAuNzgtMi4wMS0wLjQ3LTAuNTMtMC43NS0xLjIyLTAuNzUtMS45OSAwLTEuNjYgMS4zNC0zIDMtM2gzLjUzYzUuNTIgMCAxMC00LjQ4IDEwLTEwIDAtOC44NC04LjA2LTE2LTE4LTE2em0tMTEgMThjLTEuNjYgMC0zLTEuMzQtMy0zczEuMzQtMyAzLTMgMyAxLjM0IDMgMy0xLjM0IDMtMyAzem02LThjLTEuNjYgMC0zLTEuMzQtMy0zczEuMzQtMyAzLTMgMyAxLjM0IDMgMy0xLjM0IDMtMyAzem0xMCAwYy0xLjY2IDAtMy0xLjM0LTMtM3MxLjM0LTMgMy0zIDMgMS4zNCAzIDMtMS4zNCAzLTMgM3ptNiA4Yy0xLjY2IDAtMy0xLjM0LTMtM3MxLjM0LTMgMy0zIDMgMS4zNCAzIDMtMS4zNCAzLTMgM3oiLz4KIDxwYXRoIGQ9Im0wIDBoNDh2NDhoLTQ4eiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K) no-repeat;
     background-position: right;
 }
@@ -130,7 +126,48 @@ ul {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #bbb;
     color: black;
+    background-color: #bbb;
     text-align: center;
+}
+.footer span{
+    padding: 15px;
+}
+.footer a{
+    text-decoration: none;
+    padding: 15px;
+    color: black;
+    opacity: 0.4;
+}
+.change-color{
+    padding-left: 80px;
+    padding-top: 8px;
+}
+.btn-color{
+    border: 1px solid #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+}
+.btn-white {
+    background: #fff;
+    box-shadow: 0 -2px 0 2px #bdc9db inset, 0 5px 5px rgba(3, 25, 41, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+}
+.btn-color:hover {
+    background: #333;
+    box-shadow: 0 -2px 0 2px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+.btn-pink {
+    background: #ffc0cb;
+    box-shadow: 0 -2px 0 2px #ffc0cb inset, 0 5px 5px rgba(65, 8, 8, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+}
+.btn-green {
+    background: #0ec518;
+    box-shadow: 0 -2px 0 2px #0b9512 inset, 0 5px 5px rgba(0, 7, 1, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+}
+.btn-yellow {
+    background: #ffc334;
+    box-shadow: 0 -2px 0 2px #ffb401 inset, 0 5px 5px rgba(103, 73, 0, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
 }
