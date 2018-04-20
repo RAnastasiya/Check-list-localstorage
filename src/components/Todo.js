@@ -2,12 +2,11 @@ import React, { PropTypes } from 'react'
 
 const Todo = ({ onClick, ColorWhite, ColorPink, ColorGreen, ColorYellow, completed, text, color}) => (
   <li>
-      <div className="task-list"
-           style={{backgroundColor: color, textDecoration: completed ? 'line-through' : 'none'}}>
-          {text}
+      <div className="task-list" style={{backgroundColor: color}}>
+          <p style={{textDecoration: completed ? 'line-through' : 'none'}}>{text}</p>
           <div>
               <button type="submit" className="btn-group btn-edit" />
-              <button type="submit" className="btn-group" onClick={onClick}>
+              <button type="submit" className="btn-group" onClick={onClick} style={{backgroundColor: color}}>
                   <svg width="24px" xmlns="http://www.w3.org/2000/svg" fill="#000000" viewBox="0 0 24 24" height="24px">
                       <path d="m6 19c0 1.1 0.9 2 2 2h8c1.1 0 2-0.9 2-2v-12h-12v12zm13-15h-3.5l-1-1h-5l-1 1h-3.5v2h14v-2z"/>
                       <path d="m0 0h24v24h-24z" fill="none"/>
