@@ -16,6 +16,11 @@ export const toggleTodo = (id) => ({
   id
 });
 
+export const toggleInput = (id) => ({
+    type: 'TOGGLE_INPUT',
+    id
+});
+
 export const changeColor = (color) => ({
     type: 'CHANGE_COLOR',
     color: color

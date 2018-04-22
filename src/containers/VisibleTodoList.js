@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { toggleTodo } from '../actions'
+import {toggleInput, toggleTodo} from '../actions'
 import { changeColor } from '../actions'
 import TodoList from '../components/TodoList'
 
@@ -21,7 +21,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps =  ({
-  onTodoClick: toggleTodo,
+    onTodoClick: toggleTodo,
+    onEditClick: toggleInput,
     ColorWhite: changeColor,
     ColorPink: changeColor,
     ColorGreen: changeColor,

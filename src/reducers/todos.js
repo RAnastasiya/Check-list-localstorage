@@ -18,11 +18,18 @@ const todo = (state, action) => {
       if (state.id !== action.id) {
         return state
       }
-
       return {
         ...state,
         completed: !state.completed
       };
+    case 'TOGGLE_INPUT':
+        if (state.id !== action.id) {
+            return state
+        }
+        return {
+            ...state,
+            statusInput: !state.statusInput
+        };
     default:
       return state
   }
@@ -45,6 +52,10 @@ const todos = (state = [], action) => {
       return state.map(t =>
         todo(t, action)
       );
+    case 'TOGGLE_INPUT':
+        return state.map(t =>
+            todo(t, action)
+        );
     default:
       return state
   }
