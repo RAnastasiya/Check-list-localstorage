@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
+import Input from "../containers/Input";
 
 class Todo extends Component {
-    onBtnClickHandler (){
-        console.log(this.text)
-    }
     render() {
         return (
             <li>
@@ -21,16 +19,13 @@ class Todo extends Component {
                                 <path d="m0 0h24v24h-24z" fill="none"/>
                             </svg>
                         </button>
-                        <button type="submit" className="btn-group btn-edit" onClick={this.props.onEditClick}/>
+                        <button type="submit" className="btn-group btn-edit" onClick={this.props.onCancelClick}/>
                     </div>
-                    <form style={{display: this.props.statusInput ? 'block' : 'none'}} >
-                        <input type="text" defaultValue={this.props.text} ref={node => {
-                            this.input = node
-                        }}  />
 
-                        <button type="submit" className="btn-group btn-cancel" onClick={this.props.onEditClick}/>
-                        <button type="submit" className="btn-group btn-save" onClick={this.onBtnClickHandler}/>
-                    </form>
+                    <div style={{display: this.props.statusInput ? 'block' : 'none'}}>
+                        <Input kay={this.props.id}/>
+                        <button className="btn-group btn-cancel" onClick={this.props.onCancelClick}/>
+                    </div>
 
                     <div className="change-color">
                         <span className="btn-color btn-white" onClick={this.props.ColorWhite}/>

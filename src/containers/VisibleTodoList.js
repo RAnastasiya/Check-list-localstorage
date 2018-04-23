@@ -22,7 +22,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps =  ({
     onTodoClick: toggleTodo,
-    onEditClick: toggleInput,
+    onCancelClick: toggleInput,
     ColorWhite: changeColor,
     ColorPink: changeColor,
     ColorGreen: changeColor,

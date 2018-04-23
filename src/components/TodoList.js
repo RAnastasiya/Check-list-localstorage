@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import Todo from './Todo'
 
-const TodoList = ({ todos, onTodoClick,onEditClick, ColorWhite, ColorPink, ColorGreen,ColorYellow }) => (
+const TodoList = ({ todos, text, onTodoClick, onCancelClick, ColorWhite, ColorPink, ColorGreen,ColorYellow}) => (
 
     <div className="lists">
       <ul>
@@ -10,7 +10,7 @@ const TodoList = ({ todos, onTodoClick,onEditClick, ColorWhite, ColorPink, Color
             key={todo.id}
             {...todo}
             onClick={() => onTodoClick(todo.id)}
-            onEditClick={() => onEditClick(todo.id)}
+            onCancelClick={() => onCancelClick(todo.id)}
             ColorWhite={() => ColorWhite(todo.color="#fff")}
             ColorPink={() => ColorPink(todo.color="#ffc0cb")}
             ColorGreen={() => ColorGreen(todo.color="#d0edd7")}
@@ -29,7 +29,7 @@ TodoList.propTypes = {
     color: PropTypes.string.isRequired
   }).isRequired).isRequired,
     onTodoClick: PropTypes.func.isRequired,
-    onEditClick: PropTypes.func.isRequired,
+    onCancelClick: PropTypes.func.isRequired,
     ColorWhite: PropTypes.func.isRequired,
     ColorPink: PropTypes.func.isRequired,
     ColorGreen: PropTypes.func.isRequired,

@@ -7,7 +7,7 @@ let AddTodo = ({ dispatch }) => {
 
   return (
     <div id="myDIV" className="header">
-      <form className="catalin" onSubmit={e => {
+      <form onSubmit={e => {
         e.preventDefault();
         if (!input.value.trim()) {
           return

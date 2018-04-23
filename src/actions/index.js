@@ -23,5 +23,10 @@ export const toggleInput = (id) => ({
 
 export const changeColor = (color) => ({
     type: 'CHANGE_COLOR',
-    color: color
+    color
+});
+
+export const changeText = (text) => ({
+    type: 'CHANGE_TEXT',
+    text: text
 });

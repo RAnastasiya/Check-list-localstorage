@@ -14,6 +14,16 @@ const todo = (state, action) => {
             color: state.color,
             completed: state.completed
         };
+    case 'CHANGE_TEXT':
+        if (!state.statusInput) {
+            return state
+        }
+      return {
+          id: state.id,
+          text: action.text,
+          color: state.color,
+          completed: state.completed
+      };
     case 'TOGGLE_TODO':
       if (state.id !== action.id) {
         return state
@@ -45,6 +55,10 @@ const todos = (state = [], action) => {
         todo(undefined, action)
       ];
     case 'CHANGE_COLOR':
+        return state.map(t =>
+            todo(t, action)
+        );
+    case 'CHANGE_TEXT':
         return state.map(t =>
             todo(t, action)
         );
