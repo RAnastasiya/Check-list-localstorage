@@ -134,6 +134,9 @@ ul {
     font-size: 16px;
     margin: 0 !important;
     padding-bottom: 9px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    rows:5;
 }
 .footer {
 
