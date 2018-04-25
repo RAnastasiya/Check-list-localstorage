@@ -23,10 +23,9 @@ class Todo extends Component {
                     </div>
 
                     <div style={{display: this.props.statusInput ? 'block' : 'none'}}>
-                        <Input kay={this.props.id}/>
+                        <Input kay={this.props.id} text={this.props.text}/>
                         <button className="btn-group btn-cancel" onClick={this.props.onCancelClick}/>
                     </div>
-
                     <div className="change-color">
                         <span className="btn-color btn-white" onClick={this.props.ColorWhite}/>
                         <span className="btn-color btn-pink" onClick={this.props.ColorPink} />

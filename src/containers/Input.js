@@ -2,9 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {changeText} from '../actions'
 
-let Input = ({ dispatch }) => {
+let Input = ( {dispatch, text}) => {
     let input;
-
     return (
         <form onSubmit={e => {
             e.preventDefault();
@@ -13,7 +12,7 @@ let Input = ({ dispatch }) => {
             }
             dispatch(changeText(input.value));
         }}>
-            <input type="text"  ref={node => {
+            <input type="text" defaultValue={text}  ref={node => {
                 input = node
             }} />
             <button type="submit" className="btn-group btn-save"/>
