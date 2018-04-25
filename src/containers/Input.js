@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import {changeText} from '../actions'
 
-let Input = ( {dispatch, text}) => {
+let Input = ( {dispatch, id, text}) => {
     let input;
     return (
         <form onSubmit={e => {
@@ -10,7 +10,7 @@ let Input = ( {dispatch, text}) => {
             if (!input.value.trim()) {
                 return
             }
-            dispatch(changeText(input.value));
+            dispatch(changeText(id, input.value));
         }}>
             <div><input className="edit-text" type="text" defaultValue={text}  ref={node => {
                 input = node

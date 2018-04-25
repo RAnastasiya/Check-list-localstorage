@@ -27,7 +27,9 @@ export const changeColor = (color) => ({
     color
 });
 
-export const changeText = (text) => ({
+export const changeText = (id, text) => ({
     type: 'CHANGE_TEXT',
+    id: id,
     text: text
+
 });

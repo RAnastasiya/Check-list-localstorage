@@ -15,7 +15,10 @@ const todo = (state, action) => {
             completed: state.completed
         };
     case 'CHANGE_TEXT':
-        if (!state.statusInput) {
+        if (state.id !== action.id) {
+            return state
+        }
+        else if (!state.statusInput) {
             return state
         }
       return {
@@ -65,7 +68,7 @@ const todos = (state = [], action) => {
     case 'TOGGLE_TODO':
       return state.map(t =>
         todo(t, action)
-      );
+        );
     case 'TOGGLE_INPUT':
         return state.map(t =>
             todo(t, action)
