@@ -12,9 +12,9 @@ let Input = ( {dispatch, text}) => {
             }
             dispatch(changeText(input.value));
         }}>
-            <input type="text" defaultValue={text}  ref={node => {
+            <div><input className="edit-text" type="text" defaultValue={text}  ref={node => {
                 input = node
-            }} />
+            }} /></div>
             <button type="submit" className="btn-group btn-save"/>
         </form>
     )

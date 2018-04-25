@@ -1,8 +1,9 @@
-let nextTodoId = 0;
+// let nextTodoId = 0;
+var uniqid = require('uniqid');
 export const addTodo = (text) => ({
   type: 'ADD_TODO',
   color: "white",
-  id: nextTodoId++,
+  id: uniqid(),
   text
 });
 
